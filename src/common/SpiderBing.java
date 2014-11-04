@@ -20,7 +20,7 @@ public class SpiderBing extends Spider{
 			Elements ts = document.select(".b_algo");
 			for(Element t:ts){
 			Element a = t.select("a").first();
-			String title = a.html();
+			String title = a.text();
 			String url = a.attr("href").toString();
 			
 			SearchResult sr = new SearchResult();
